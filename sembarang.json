@@ -1,0 +1,2329 @@
+{
+  "semesters": [
+    {
+      "deleted_at": null,
+      "id": 1,
+      "tahun": 2020,
+      "kode": "20192",
+      "jenis": "genap",
+      "created_at": null,
+      "updated_at": "2021-01-14 09:45:06",
+      "is_active": 0,
+      "tahun_ajaran": "2019/2020",
+      "updated_by": 33800,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8132,
+            "nama_resmi": "KERJA PRAKTEK",
+            "nama_singkat": "KERJA PRAKTEK",
+            "nama_asing": "INTERNSHIP",
+            "nama_asing_singkat": "INTERNSHIP",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "33934",
+            "semester": 7,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "401D4232",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "a0b0cc1c-fa6f-4696-8167-bf97ddc5f559",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 137758,
+                "id_mata_kuliah": 8132,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288517
+        },
+        {
+          "mata_kuliah": {
+            "id": 8136,
+            "nama_resmi": "SKRIPSI / TUGAS AKHIR",
+            "nama_singkat": "SKRIPSI / TUGAS AKHIR",
+            "nama_asing": "FINAL PROJECT (SKRIPSI)",
+            "nama_asing_singkat": "FINAL PROJECT (SKRIPSI)",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "1",
+            "semester": 8,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "404D4234",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "ed18bc24-5582-444d-97dc-b3bc873cf234",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8136,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 44418,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 4
+              },
+              {
+                "id": 80700,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "M",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 10326124
+        },
+        {
+          "mata_kuliah": {
+            "id": 8153,
+            "nama_resmi": "SEMINAR HASIL",
+            "nama_singkat": "SEMINAR HASIL",
+            "nama_asing": "SEMINAR II",
+            "nama_asing_singkat": "SEMINAR II",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "33934",
+            "semester": 8,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "403D4232",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "295054a9-a27e-458f-8386-9f631a410102",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 137759,
+                "id_mata_kuliah": 8153,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "M",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 10326123
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 51,
+      "tahun": 2014,
+      "kode": "20141",
+      "jenis": "ganjil",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2020-03-01 06:27:32",
+      "is_active": 0,
+      "tahun_ajaran": "2014/2015",
+      "updated_by": null,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8096,
+            "nama_resmi": "FISIKA DASAR",
+            "nama_singkat": "FISIKA DASAR",
+            "nama_asing": "PHYSICS PHYSICS",
+            "nama_asing_singkat": "PHYSICS PHYSICS",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 1,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "018U0033",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "29a3b342-5fcc-483f-a37d-00fcf39181a1",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8096,
+                "id_mata_kuliah": 8096,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 3
+              },
+              {
+                "id": 44378,
+                "id_mata_kuliah": 8096,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 80660,
+                "id_mata_kuliah": 8096,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 12288537
+        },
+        {
+          "mata_kuliah": {
+            "id": 8097,
+            "nama_resmi": "PENGANTAR TEKNOLOGI INFORMASI",
+            "nama_singkat": "PENGANTAR TEKNOLOGI INFORMASI",
+            "nama_asing": "INFORMATION TECHNOLOGY FOUNDATIONS",
+            "nama_asing_singkat": "INFORMATION TECHNOLOGY FOUNDATIONS",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 1,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "101D4213",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "b6b18175-49f1-41af-9ccb-63aea123a25c",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8097,
+                "id_mata_kuliah": 8097,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 44379,
+                "id_mata_kuliah": 8097,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 1
+              },
+              {
+                "id": 80661,
+                "id_mata_kuliah": 8097,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 12288538
+        },
+        {
+          "mata_kuliah": {
+            "id": 8098,
+            "nama_resmi": "DASAR PEMROGRAMAN KOMPUTER",
+            "nama_singkat": "DASAR PEMROGRAMAN KOMPUTER",
+            "nama_asing": "BASIC COMPUTER PROGRAMMING",
+            "nama_asing_singkat": "BASIC COMPUTER PROGRAMMING",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 1,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "102D4213",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "ca010242-b517-4137-a4e1-9746591d32f7",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8098,
+                "id_mata_kuliah": 8098,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 44380,
+                "id_mata_kuliah": 8098,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 1
+              },
+              {
+                "id": 80662,
+                "id_mata_kuliah": 8098,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288535
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PENGANTAR TEKNOLOGI INFORMASI",
+            "kode": "101D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1116179
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PRAK. PENGANTAR TEKNOLOGI INFORMASI",
+            "kode": "111D4211",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 1
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1116180
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "DASAR PEMROGRAMAN KOMPUTER",
+            "kode": "102D4211",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 1
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1116181
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PRAK. DASAR PEMROGRAMAN KOMPUTER",
+            "kode": "112D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1116182
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "BAHASA INDONESIA",
+            "kode": "009U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1116183
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "MATEMATIKA DASAR I",
+            "kode": "016U0033",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1116184
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PENDIDIKAN KEWARGANEGARAAN",
+            "kode": "011U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "B+",
+          "nilai_angka": "3.50",
+          "source": "Transkrip",
+          "id_transkrip": 1116185
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "WAWASAN IPTEKS",
+            "kode": "008U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1116186
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PENDIDIKAN KEWARGANEGARAAN",
+            "kode": "011U0033",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "B+",
+          "nilai_angka": "3.50",
+          "source": "Transkrip",
+          "id_transkrip": 2435458
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 52,
+      "tahun": 2015,
+      "kode": "20142",
+      "jenis": "genap",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2020-03-01 06:27:32",
+      "is_active": 0,
+      "tahun_ajaran": "2014/2015",
+      "updated_by": null,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8138,
+            "nama_resmi": "MATEMATIKA DASAR II",
+            "nama_singkat": "MATEMATIKA DASAR II",
+            "nama_asing": "BASIC MATHEMATICS II",
+            "nama_asing_singkat": "BASIC MATHEMATICS II",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 2,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "017U0033",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "86ee7c5c-95a9-4696-85f0-04b802b95c34",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8138,
+                "id_mata_kuliah": 8138,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 3
+              },
+              {
+                "id": 44420,
+                "id_mata_kuliah": 8138,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 80702,
+                "id_mata_kuliah": 8138,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "B+",
+          "nilai_angka": "3.50",
+          "source": "Transkrip",
+          "id_transkrip": 12288542
+        },
+        {
+          "mata_kuliah": {
+            "id": 8137,
+            "nama_resmi": "PANCASILA",
+            "nama_singkat": "PANCASILA",
+            "nama_asing": "PANCASILA",
+            "nama_asing_singkat": "PANCASILA",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 2,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "012U0032",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "b3add53f-2fb7-439c-9641-36c5714de010",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8137,
+                "id_mata_kuliah": 8137,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 44419,
+                "id_mata_kuliah": 8137,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 80701,
+                "id_mata_kuliah": 8137,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "B+",
+          "nilai_angka": "3.50",
+          "source": "Transkrip",
+          "id_transkrip": 12288540
+        },
+        {
+          "mata_kuliah": {
+            "id": 8100,
+            "nama_resmi": "ALGORITMA DAN STRUKTUR DATA",
+            "nama_singkat": "ALGORITMA DAN STRUKTUR DATA",
+            "nama_asing": "ALGORITHM AND DATA STRUCTURE",
+            "nama_asing_singkat": "ALGORITHM AND DATA STRUCTURE",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 2,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "104D4224",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "aed3f158-7de2-4305-8ec6-3d08cf716d83",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8100,
+                "id_mata_kuliah": 8100,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 3
+              },
+              {
+                "id": 44382,
+                "id_mata_kuliah": 8100,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 1
+              },
+              {
+                "id": 80664,
+                "id_mata_kuliah": 8100,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288543
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "MATEMATIKA DASAR II",
+            "kode": "090U0033",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "B+",
+          "nilai_angka": "3.50",
+          "source": "Transkrip",
+          "id_transkrip": 1117996
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "FISIKA DASAR II",
+            "kode": "089U0033",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1117997
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "ALGORITMA DAN PEMROGRAMAN",
+            "kode": "132D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1117998
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PRAKTIKUM ALGORITMA DAN PEMROGRAMAN",
+            "kode": "141D4221",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 1
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1117999
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "MATEMATIKA DISKRIT",
+            "kode": "103D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "B",
+          "nilai_angka": "3.00",
+          "source": "Transkrip",
+          "id_transkrip": 1118000
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM DIGITAL",
+            "kode": "105D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1118001
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "BAHASA INGGRIS",
+            "kode": "010U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1118002
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PENDIDIKAN AGAMA ISLAM",
+            "kode": "001U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1118003
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "WAWASAN SOSIAL BUDAYA MARITIM",
+            "kode": "007U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1118004
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PENDIDIKAN AGAMA ISLAM",
+            "kode": "072U0033",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 2435459
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "BAHASA INGGRIS",
+            "kode": "081U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435460
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "WAWASAN SOSIAL BUDAYA BAHARI",
+            "kode": "078U0032",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435461
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "MATEMATIKA DISKRIT",
+            "kode": "131D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "B",
+          "nilai_angka": "3.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435462
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM DIGITAL",
+            "kode": "133D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435463
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 53,
+      "tahun": 2015,
+      "kode": "20151",
+      "jenis": "ganjil",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2020-03-01 06:27:32",
+      "is_active": 0,
+      "tahun_ajaran": "2015/2016",
+      "updated_by": null,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8139,
+            "nama_resmi": "PROBABILITAS DAN STATISTIK",
+            "nama_singkat": "PROBABILITAS DAN STATISTIK",
+            "nama_asing": "PROBABILITY AND STATISTICS",
+            "nama_asing_singkat": "PROBABILITY AND STATISTICS",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 3,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "203D4213",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "0d4cb93d-c7bb-4dec-af6f-4713c9e34b80",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8139,
+                "id_mata_kuliah": 8139,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 3
+              },
+              {
+                "id": 44421,
+                "id_mata_kuliah": 8139,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 80703,
+                "id_mata_kuliah": 8139,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 12288525
+        },
+        {
+          "mata_kuliah": {
+            "id": 8116,
+            "nama_resmi": "DASAR MULTIMEDIA",
+            "nama_singkat": "DASAR MULTIMEDIA",
+            "nama_asing": "BASIC MULTIMEDIA",
+            "nama_asing_singkat": "BASIC MULTIMEDIA",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 3,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "205D4212",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "efbbea83-7e19-44c8-9f66-21ab80b43235",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8116,
+                "id_mata_kuliah": 8116,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 44398,
+                "id_mata_kuliah": 8116,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 80680,
+                "id_mata_kuliah": 8116,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288529
+        },
+        {
+          "mata_kuliah": {
+            "id": 8117,
+            "nama_resmi": "PEMROGRAMAN BERORIENTASI OBYEK",
+            "nama_singkat": "PEMROGRAMAN BERORIENTASI OBYEK",
+            "nama_asing": "OBJECT-ORIENTED PROGRAMMING",
+            "nama_asing_singkat": "OBJECT-ORIENTED PROGRAMMING",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 3,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "206D4213",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "5e69540b-6cc8-4733-bd0a-7b7eac0c2ab8",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8117,
+                "id_mata_kuliah": 8117,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 44399,
+                "id_mata_kuliah": 8117,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 1
+              },
+              {
+                "id": 80681,
+                "id_mata_kuliah": 8117,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288530
+        },
+        {
+          "mata_kuliah": {
+            "id": 8126,
+            "nama_resmi": "JARINGAN KOMPUTER",
+            "nama_singkat": "JARINGAN KOMPUTER",
+            "nama_asing": "COMPUTER NETWORKS",
+            "nama_asing_singkat": "COMPUTER NETWORKS",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 3,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "204D4213",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "40d67b1c-f146-46e7-9c3d-2d30501ef012",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8126,
+                "id_mata_kuliah": 8126,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 3
+              },
+              {
+                "id": 44408,
+                "id_mata_kuliah": 8126,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 80690,
+                "id_mata_kuliah": 8126,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288527
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PEMROGRAMAN BERORIENTASI OBYEK",
+            "kode": "207D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1330410
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "STRUKTUR DATA",
+            "kode": "202D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1330411
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PRAK.PEMROGRAMAN BERORIENTASI OBYEK",
+            "kode": "211D4211",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 1
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1330412
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "ALJABAR LINIER",
+            "kode": "201D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "B+",
+          "nilai_angka": "3.50",
+          "source": "Transkrip",
+          "id_transkrip": 1330413
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "ARSITEKTUR DAN ORGANISASI KOMPUTER",
+            "kode": "202D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1330414
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PENGANTAR SISTEM OPERASI",
+            "kode": "205D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1330415
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": " SISTEM OPERASI",
+            "kode": "207D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1330416
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "STATISTIK UNTUK KOMPUTASI",
+            "kode": "204D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1330417
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "ARSITEKTUR DAN ORGANISASI KOMPUTER",
+            "kode": "203D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1330418
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "DASAR MULTIMEDIA",
+            "kode": "206D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435464
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "JARINGAN KOMPUTER",
+            "kode": "309D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435465
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 54,
+      "tahun": 2016,
+      "kode": "20152",
+      "jenis": "genap",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2020-11-25 17:50:03",
+      "is_active": 0,
+      "tahun_ajaran": "2015/2016",
+      "updated_by": null,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8123,
+            "nama_resmi": "REKAYASA PERANGKAT LUNAK I",
+            "nama_singkat": "REKAYASA PERANGKAT LUNAK I",
+            "nama_asing": "SOFTWARE ENGINEERING I",
+            "nama_asing_singkat": "SOFTWARE ENGINEERING I",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 4,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "211D4222",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "1367c34c-156f-4652-8138-b7e904406311",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8123,
+                "id_mata_kuliah": 8123,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 44405,
+                "id_mata_kuliah": 8123,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 80687,
+                "id_mata_kuliah": 8123,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288532
+        },
+        {
+          "mata_kuliah": {
+            "id": 8144,
+            "nama_resmi": "PEMROGRAMAN APLIKASI MOBILE",
+            "nama_singkat": "PEMROGRAMAN APLIKASI MOBILE",
+            "nama_asing": "MOBILE APPLICATION PROGRAMMING",
+            "nama_asing_singkat": "MOBILE APPLICATION PROGRAMMING",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 6,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "309D4223",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "d5ec41ae-a187-44ef-864d-fc4aa5203e9c",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8144,
+                "id_mata_kuliah": 8144,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 1
+              },
+              {
+                "id": 44426,
+                "id_mata_kuliah": 8144,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 80708,
+                "id_mata_kuliah": 8144,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Nilai Akhir",
+          "id_kelas_kuliah_nilai_akhir": 743405
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "REKAYASA PERANGKAT LUNAK 1",
+            "kode": "235D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1332167
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "BASIS DATA I",
+            "kode": "209D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1332168
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "KECERDASAN BUATAN",
+            "kode": "210D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1332169
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "METODE KOMPUTASI NUMERIK",
+            "kode": "208D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1332170
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PEMROGRAMAN VISUAL",
+            "kode": "214D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1332171
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PEMROGRAMAN BERBASIS WEB",
+            "kode": "212D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1332173
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "VISI KOMPUTER",
+            "kode": "321D4224",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1332174
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM OPERASI MOBILE",
+            "kode": "454D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1332175
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "GRAFIKA KOMPUTER",
+            "kode": "419D4233",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1332176
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "METODE KOMPUTASI NUMERIK",
+            "kode": "231D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 2435466
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "KECERDASAN BUATAN",
+            "kode": "234D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435467
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM OPERASI MOBILE",
+            "kode": "237D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435468
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PENGOLAHAN CITRA",
+            "kode": "333D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435470
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "BASIS DATA I",
+            "kode": "232D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435471
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PEMROGRAMAN VISUAL",
+            "kode": "238D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435472
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "GRAFIKA KOMPUTER",
+            "kode": "331D4223",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 2435473
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PEMROGRAMAN BERBASIS WEB",
+            "kode": "334D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435474
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 55,
+      "tahun": 2016,
+      "kode": "20161",
+      "jenis": "ganjil",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2020-12-15 20:08:13",
+      "is_active": 0,
+      "tahun_ajaran": "2016/2017",
+      "updated_by": 45099,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "nama_resmi": "BASIS DATA II",
+            "kode": "302D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1538460
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "REKAYASA PERANGKAT LUNAK II",
+            "kode": "303D4212",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1538461
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM INFORMASI",
+            "kode": "306D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "B+",
+          "nilai_angka": "3.50",
+          "source": "Transkrip",
+          "id_transkrip": 1538462
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "TEORI BAHASA DAN OTOMATA",
+            "kode": "304D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1538463
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM MEMORI KOMPUTER",
+            "kode": "307D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1538464
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "TECHNOPRENEURSHIP",
+            "kode": "305D4213",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1538465
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "METODE PENELITIAN",
+            "kode": "308D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1538466
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "TOPIK KHUSUS INTERNET OF THINGS",
+            "kode": "423D4233",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1538467
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "ETIKA PROFESI",
+            "kode": "213D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435475
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 56,
+      "tahun": 2017,
+      "kode": "20162",
+      "jenis": "genap",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2020-03-01 06:27:32",
+      "is_active": 0,
+      "tahun_ajaran": "2016/2017",
+      "updated_by": null,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM TERSEMAT",
+            "kode": "333D4224",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "A-",
+          "nilai_angka": "3.75",
+          "source": "Transkrip",
+          "id_transkrip": 1540357
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "PEMROGRAMAN PARALEL",
+            "kode": "331D4224",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1540358
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "JARINGAN SENSOR NIRKABEL",
+            "kode": "332D4224",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1540359
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "TOPIK KHUSUS JARINGAN KOMPUTER",
+            "kode": "439D4233",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1540360
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SISTEM TERDISTRIBUSI",
+            "kode": "413D4233",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1540361
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "MOBILE ADHOC NETWORK",
+            "kode": "415D4233",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 3
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1540362
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "ETIKA PROFESI",
+            "kode": "213D4222",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1540363
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 57,
+      "tahun": 2017,
+      "kode": "20171",
+      "jenis": "ganjil",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2021-07-07 12:19:28",
+      "is_active": 0,
+      "tahun_ajaran": "2017/2018",
+      "updated_by": 48139,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SEMINAR PROPOSAL",
+            "kode": "402D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "K",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 1757691
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SEMINAR HASIL",
+            "kode": "403D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "K",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 1757692
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "Kuliah Kerja Nyata",
+            "kode": "499U004",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1757693
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "KERJA PRAKTEK",
+            "kode": "401D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "K",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435476
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SKRIPSI / TUGAS AKHIR",
+            "kode": "404D4234",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "K",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435477
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 58,
+      "tahun": 2018,
+      "kode": "20172",
+      "jenis": "genap",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2021-07-04 18:44:15",
+      "is_active": 0,
+      "tahun_ajaran": "2017/2018",
+      "updated_by": 33774,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8125,
+            "nama_resmi": "INTERAKSI MANUSIA DAN KOMPUTER",
+            "nama_singkat": "INTERAKSI MANUSIA DAN KOMPUTER",
+            "nama_asing": "HUMAN-COMPUTER INTERACTION",
+            "nama_asing_singkat": "HUMAN-COMPUTER INTERACTION",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 5,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "301D4213",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "d6737d10-abd0-4a20-904e-58e6e828dd3b",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8125,
+                "id_mata_kuliah": 8125,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 44407,
+                "id_mata_kuliah": 8125,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 1
+              },
+              {
+                "id": 80689,
+                "id_mata_kuliah": 8125,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288548
+        },
+        {
+          "mata_kuliah": {
+            "id": 8144,
+            "nama_resmi": "PEMROGRAMAN APLIKASI MOBILE",
+            "nama_singkat": "PEMROGRAMAN APLIKASI MOBILE",
+            "nama_asing": "MOBILE APPLICATION PROGRAMMING",
+            "nama_asing_singkat": "MOBILE APPLICATION PROGRAMMING",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": null,
+            "semester": 6,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "309D4223",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "d5ec41ae-a187-44ef-864d-fc4aa5203e9c",
+            "id_kelas_kuliah_jenis": 1,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8144,
+                "id_mata_kuliah": 8144,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 1
+              },
+              {
+                "id": 44426,
+                "id_mata_kuliah": 8144,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 2
+              },
+              {
+                "id": 80708,
+                "id_mata_kuliah": 8144,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288550
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SEMINAR HASIL",
+            "kode": "403D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435478
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SKRIPSI / TUGAS AKHIR",
+            "kode": "404D4234",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435479
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "KERJA PRAKTEK",
+            "kode": "401D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435480
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SEMINAR PROPOSAL",
+            "kode": "402D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435481
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 59,
+      "tahun": 2018,
+      "kode": "20181",
+      "jenis": "ganjil",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2020-12-30 09:56:22",
+      "is_active": 0,
+      "tahun_ajaran": "2018/2019",
+      "updated_by": 45146,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8134,
+            "nama_resmi": "SEMINAR PROPOSAL",
+            "nama_singkat": "SEMINAR PROPOSAL",
+            "nama_asing": "SEMINAR I",
+            "nama_asing_singkat": "SEMINAR I",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "33774",
+            "semester": 7,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "402D4232",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "fa0d4941-a2cd-4ede-aa70-e41ee42b4b91",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 143577,
+                "id_mata_kuliah": 8134,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288549
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "KERJA PRAKTEK",
+            "kode": "401D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 1996976
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 60,
+      "tahun": 2019,
+      "kode": "20182",
+      "jenis": "genap",
+      "created_at": "2020-03-01 06:27:32",
+      "updated_at": "2022-02-09 19:36:44",
+      "is_active": 0,
+      "tahun_ajaran": "2018/2019",
+      "updated_by": 45134,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SKRIPSI / TUGAS AKHIR",
+            "kode": "404D4234",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 4
+              }
+            ]
+          },
+          "nilai_huruf": "TM",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 1999064
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "KERJA PRAKTEK",
+            "kode": "401D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435482
+        },
+        {
+          "mata_kuliah": {
+            "nama_resmi": "SEMINAR HASIL",
+            "kode": "403D4232",
+            "mata_kuliah_jumlah_skses": [
+              {
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 2435483
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 62,
+      "tahun": 2020,
+      "kode": "20201",
+      "jenis": "ganjil",
+      "created_at": "2020-06-15 08:32:28",
+      "updated_at": "2020-12-30 10:02:16",
+      "is_active": 0,
+      "tahun_ajaran": "2020/2021",
+      "updated_by": 45146,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8153,
+            "nama_resmi": "SEMINAR HASIL",
+            "nama_singkat": "SEMINAR HASIL",
+            "nama_asing": "SEMINAR II",
+            "nama_asing_singkat": "SEMINAR II",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "33934",
+            "semester": 8,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "403D4232",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "295054a9-a27e-458f-8386-9f631a410102",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 137759,
+                "id_mata_kuliah": 8153,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "TM",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288520
+        },
+        {
+          "mata_kuliah": {
+            "id": 8136,
+            "nama_resmi": "SKRIPSI / TUGAS AKHIR",
+            "nama_singkat": "SKRIPSI / TUGAS AKHIR",
+            "nama_asing": "FINAL PROJECT (SKRIPSI)",
+            "nama_asing_singkat": "FINAL PROJECT (SKRIPSI)",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "1",
+            "semester": 8,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "404D4234",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "ed18bc24-5582-444d-97dc-b3bc873cf234",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8136,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 44418,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 4
+              },
+              {
+                "id": 80700,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "TM",
+          "nilai_angka": "0.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288523
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 63,
+      "tahun": 2020,
+      "kode": "20202",
+      "jenis": "genap",
+      "created_at": "2020-11-23 22:46:19",
+      "updated_at": "2021-07-21 09:56:46",
+      "is_active": 0,
+      "tahun_ajaran": "2020/2021",
+      "updated_by": 1,
+      "kartu_hasil_studi": [
+        {
+          "mata_kuliah": {
+            "id": 8153,
+            "nama_resmi": "SEMINAR HASIL",
+            "nama_singkat": "SEMINAR HASIL",
+            "nama_asing": "SEMINAR II",
+            "nama_asing_singkat": "SEMINAR II",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "33934",
+            "semester": 8,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "403D4232",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "295054a9-a27e-458f-8386-9f631a410102",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 137759,
+                "id_mata_kuliah": 8153,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 2
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 12288545
+        },
+        {
+          "mata_kuliah": {
+            "id": 8136,
+            "nama_resmi": "SKRIPSI / TUGAS AKHIR",
+            "nama_singkat": "SKRIPSI / TUGAS AKHIR",
+            "nama_asing": "FINAL PROJECT (SKRIPSI)",
+            "nama_asing_singkat": "FINAL PROJECT (SKRIPSI)",
+            "id_prodi": 18,
+            "id_kurikulum": 117,
+            "created_by": 0,
+            "updated_by": "1",
+            "semester": 8,
+            "sifat": "A",
+            "id_prodi_jenjang": 1,
+            "kode": "404D4234",
+            "is_mata_kuliah_umum": 0,
+            "id_pddikti": "ed18bc24-5582-444d-97dc-b3bc873cf234",
+            "id_kelas_kuliah_jenis": 2,
+            "is_kemajuan_studi": 0,
+            "mata_kuliah_jumlah_skses": [
+              {
+                "id": 8136,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 1,
+                "jumlah_sks": 0
+              },
+              {
+                "id": 44418,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 2,
+                "jumlah_sks": 4
+              },
+              {
+                "id": 80700,
+                "id_mata_kuliah": 8136,
+                "id_tipe_sks": 3,
+                "jumlah_sks": 0
+              }
+            ]
+          },
+          "nilai_huruf": "A",
+          "nilai_angka": "4.00",
+          "source": "Transkrip",
+          "id_transkrip": 19722629
+        }
+      ]
+    },
+    {
+      "deleted_at": null,
+      "id": 64,
+      "tahun": 2021,
+      "kode": "20211",
+      "jenis": "ganjil",
+      "created_at": "2021-06-03 10:15:54",
+      "updated_at": "2022-01-04 11:50:46",
+      "is_active": 0,
+      "tahun_ajaran": "2021/2022",
+      "updated_by": 45123,
+      "kartu_hasil_studi": []
+    }
+  ]
+}
