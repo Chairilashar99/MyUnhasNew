@@ -52,7 +52,18 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
 
   @override
   Widget build(BuildContext context) {
-    final khsData = controller.khsModel.value;
+    // final khsData = controller.khsModel.value;
+    // print('Indeks Prestasi Data: ${khsData?.indeksPrestasis}');
+    // if (controller.isLoading.value) {
+    //   return Center(
+    //     child: CircularProgressIndicator(),
+    //   );
+    // }
+
+    // if (khsData == null) {
+    //   // Tampilkan widget alternatif atau penanganan yang sesuai
+    //   return Text('Data KHS tidak tersedia');
+    // }
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -229,28 +240,76 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
               const SizedBox(
                 height: 10,
               ),
-              SfCartesianChart(
-                primaryXAxis: CategoryAxis(
-                  minimum: 0.0,
-                  maximum: 5.0,
-                ),
-                primaryYAxis: NumericAxis(
-                  minimum: 0.50,
-                  maximum: 4.00,
-                  interval: 0.50,
-                ),
-                series: <ChartSeries>[
-                  ColumnSeries<IndeksPrestasi, dynamic>(
-                    dataSource: khsData!.indeksPrestasis,
-                    xValueMapper: (IndeksPrestasi data, _) =>
-                        '${data.tahun} ${data.semesterTahunAjaran}',
-                    yValueMapper: (IndeksPrestasi data, _) =>
-                        double.parse(data.indeksPrestasiSemester!),
-                    dataLabelSettings: const DataLabelSettings(isVisible: true),
-                    color: Palette.red,
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: SizedBox(
+              //     width: MediaQuery.of(context).size.width * 2,
+              //     child: SfCartesianChart(
+              //       primaryXAxis: CategoryAxis(
+              //         minimum: 0.0,
+              //         maximum: 10.0,
+              //       ),
+              //       primaryYAxis: NumericAxis(
+              //         minimum: 0.50,
+              //         maximum: 4.00,
+              //         interval: 0.50,
+              //       ),
+              //       series: <ChartSeries>[
+              //         ColumnSeries<IndeksPrestasi, String>(
+              //           dataSource: khsData?.indeksPrestasis ?? [],
+              //           xValueMapper: (IndeksPrestasi data, _) =>
+              //               '${data.tahun} ${data.semesterTahunAjaran}',
+              //           yValueMapper: (IndeksPrestasi data, _) =>
+              //               double.parse(data.indeksPrestasiSemester ?? '0.0'),
+              //           dataLabelSettings: const DataLabelSettings(
+              //             isVisible: true,
+              //             labelAlignment: ChartDataLabelAlignment.middle,
+              //           ),
+              //           color: Palette.red,
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // )
+              Obx(() {
+                final khsData = controller.khsModel.value;
+                if (controller.isLoading.value) {
+                  return Center(
+                    child: CircularProgressIndicator(
+                      color: Palette.red,
+                    ),
+                  );
+                }
+                return SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width * 2,
+                    child: SfCartesianChart(
+                      primaryXAxis: CategoryAxis(),
+                      primaryYAxis: NumericAxis(
+                        minimum: 0.50,
+                        maximum: 4.00,
+                        interval: 0.50,
+                      ),
+                      series: <ChartSeries>[
+                        ColumnSeries<IndeksPrestasi, String>(
+                          dataSource: khsData?.indeksPrestasis ?? [],
+                          xValueMapper: (IndeksPrestasi data, _) =>
+                              '${data.tahun} ${data.semesterTahunAjaran}',
+                          yValueMapper: (IndeksPrestasi data, _) =>
+                              double.parse(
+                                  data.indeksPrestasiSemester ?? '0.0'),
+                          dataLabelSettings: const DataLabelSettings(
+                            isVisible: true,
+                            labelAlignment: ChartDataLabelAlignment.middle,
+                          ),
+                          color: Palette.red,
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              )
+                );
+              }),
             ],
           ),
         ),
@@ -258,3 +317,5 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
     );
   }
 }
+
+//Null check operator used on a null
