@@ -40,30 +40,8 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
     MahasiswaDetail("Total Mata Kuliah:", "40"),
   ];
 
-  // List<SemesterData> semesterData = [
-  //   SemesterData('Semester 1', 3.5),
-  //   SemesterData('Semester 2', 3.7),
-  //   SemesterData('Semester 3', 3.2),
-  //   SemesterData('Semester 4', 3.8),
-  //   SemesterData('Semester 5', 3.6),
-  //   SemesterData('Semester 6', 3.9),
-  //   SemesterData('Semester 7', 3.4),
-  // ];
-
   @override
   Widget build(BuildContext context) {
-    // final khsData = controller.khsModel.value;
-    // print('Indeks Prestasi Data: ${khsData?.indeksPrestasis}');
-    // if (controller.isLoading.value) {
-    //   return Center(
-    //     child: CircularProgressIndicator(),
-    //   );
-    // }
-
-    // if (khsData == null) {
-    //   // Tampilkan widget alternatif atau penanganan yang sesuai
-    //   return Text('Data KHS tidak tersedia');
-    // }
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -240,41 +218,10 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
               const SizedBox(
                 height: 10,
               ),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: SizedBox(
-              //     width: MediaQuery.of(context).size.width * 2,
-              //     child: SfCartesianChart(
-              //       primaryXAxis: CategoryAxis(
-              //         minimum: 0.0,
-              //         maximum: 10.0,
-              //       ),
-              //       primaryYAxis: NumericAxis(
-              //         minimum: 0.50,
-              //         maximum: 4.00,
-              //         interval: 0.50,
-              //       ),
-              //       series: <ChartSeries>[
-              //         ColumnSeries<IndeksPrestasi, String>(
-              //           dataSource: khsData?.indeksPrestasis ?? [],
-              //           xValueMapper: (IndeksPrestasi data, _) =>
-              //               '${data.tahun} ${data.semesterTahunAjaran}',
-              //           yValueMapper: (IndeksPrestasi data, _) =>
-              //               double.parse(data.indeksPrestasiSemester ?? '0.0'),
-              //           dataLabelSettings: const DataLabelSettings(
-              //             isVisible: true,
-              //             labelAlignment: ChartDataLabelAlignment.middle,
-              //           ),
-              //           color: Palette.red,
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-              // )
               Obx(() {
                 final khsData = controller.khsModel.value;
                 if (controller.isLoading.value) {
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(
                       color: Palette.red,
                     ),
@@ -317,5 +264,3 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
     );
   }
 }
-
-//Null check operator used on a null

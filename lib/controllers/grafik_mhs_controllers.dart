@@ -55,8 +55,8 @@ class GrafikpageMahasiswaController extends GetxController {
       isLoading.value = true;
       final response = await KhsService().getKhs();
 
-      print('Response status code: ${response.statusCode}');
-      print('Response body: ${response.body}');
+      // print('Response status code: ${response.statusCode}');
+      // print('Response body: ${response.body}');
 
       if (response.statusCode == 401 || response.statusCode == 403) {
         logout();
@@ -66,10 +66,10 @@ class GrafikpageMahasiswaController extends GetxController {
         final Map<String, dynamic>? responseBody = json.decode(response.body);
 
         if (responseBody != null) {
-          print('Response body is not null');
+          // print('Response body is not null');
           final data = KhsModel.fromJson(responseBody);
           khsModel.value = data;
-          print('KhsModel data: $data');
+          // print('KhsModel data: $data');
         } else {
           print('Body respons null');
         }

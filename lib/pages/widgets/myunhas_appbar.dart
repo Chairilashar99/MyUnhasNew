@@ -46,17 +46,6 @@ class MyUnhasAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
       ),
-      actions: [
-        Container(
-          width: 42,
-          height: 42,
-          margin: const EdgeInsets.only(right: 12),
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            color: Palette.pink,
-          ),
-        ),
-      ],
     );
   }
 }

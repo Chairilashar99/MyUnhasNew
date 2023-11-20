@@ -114,7 +114,7 @@ class _HomescreenDosenState extends State<HomescreenDosen> {
           body: pages[value],
           bottomNavigationBar: CustomNavigationBar(
             value: value,
-            listIcons: [
+            listIcons: const [
               Iconsax.home5,
               Iconsax.calendar5,
               Iconsax.note_add5,

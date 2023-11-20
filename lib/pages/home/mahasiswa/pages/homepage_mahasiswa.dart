@@ -5,14 +5,20 @@ import 'package:my_unhas_new/constants/asset_path.dart';
 import 'package:my_unhas_new/constants/color_const.dart';
 import 'package:my_unhas_new/constants/text_const.dart';
 import 'package:my_unhas_new/controllers/profile_mhs_controllers.dart';
-import 'package:my_unhas_new/pages/widgets/glassmorphism.dart';
 import 'package:my_unhas_new/pages/widgets/menu_card.dart';
+import 'package:my_unhas_new/pages/widgets/pdf_viewer.dart';
 
 class HomepageMahasiswa extends StatelessWidget {
   final ProfileMahasiswaController controller =
       Get.put(ProfileMahasiswaController());
 
   HomepageMahasiswa({Key? key}) : super(key: key);
+
+  void _showPdfViewer(BuildContext context) {
+    Get.to(
+      () => PdfViewerPage(pdfAssetPath: 'assets/panduan.pdf'),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +89,7 @@ class HomepageMahasiswa extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 20,
-                          vertical: 16,
+                          vertical: 30,
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,35 +107,6 @@ class HomepageMahasiswa extends StatelessWidget {
                                 fontWeight: FontWeight.w700,
                                 fontSize: 18,
                                 color: Palette.white,
-                              ),
-                            ),
-                            const SizedBox(height: 16),
-                            Glassmorphism(
-                              blur: 5,
-                              opacity: .15,
-                              radius: 99,
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 12,
-                                  vertical: 6,
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    const Icon(
-                                      Icons.change_circle_outlined,
-                                      size: 20,
-                                      color: Palette.white,
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text(
-                                      'Pilih Semester',
-                                      style: kTextTheme.bodyMedium?.copyWith(
-                                        color: Palette.white,
-                                      ),
-                                    ),
-                                  ],
-                                ),
                               ),
                             ),
                           ],
@@ -178,7 +155,9 @@ class HomepageMahasiswa extends StatelessWidget {
                 ),
                 const SizedBox(height: 18),
                 ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    _showPdfViewer(context);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Palette.white,
                     minimumSize: const Size(double.infinity, 56),
@@ -194,12 +173,12 @@ class HomepageMahasiswa extends StatelessWidget {
                     shadowColor: Palette.black.withOpacity(.5),
                   ),
                   icon: const Icon(
-                    Icons.download,
+                    Icons.difference_outlined,
                     color: Palette.black,
                     size: 18,
                   ),
                   label: const Text(
-                    'Unduh Panduan',
+                    'Lihat Panduan',
                     style: TextStyle(color: Palette.black),
                   ),
                 ),

@@ -1,42 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_unhas_new/constants/color_const.dart';
 import 'package:my_unhas_new/constants/text_const.dart';
+import 'package:my_unhas_new/controllers/jadwal_mhs_controllers.dart';
+import 'package:my_unhas_new/models/krs_mhs.dart';
 import 'package:my_unhas_new/pages/widgets/schedule_card.dart';
 
 class JadwalpageMahasiswa extends StatefulWidget {
-  const JadwalpageMahasiswa({super.key});
+  const JadwalpageMahasiswa({Key? key}) : super(key: key);
 
   @override
   State<JadwalpageMahasiswa> createState() => _JadwalpageMahasiswaState();
 }
 
 class _JadwalpageMahasiswaState extends State<JadwalpageMahasiswa> {
-  List<ScheduleCard> schedules = [
-    const ScheduleCard(
-      title: 'Bahasa Indonesia',
-      time: '16.30 - 17.30 WITA',
-      code: 'MKU 213',
-      subtitle: 'Bahasa Indonesia A',
-      label: 'Wajib',
-    ),
-    const ScheduleCard(
-      title: 'Bahasa Inggris',
-      time: '13.30 - 15.00 WITA',
-      code: 'MKU 222',
-      subtitle: 'Bahasa Inggris A',
-      label: 'Perminatan',
-    ),
-  ];
-
-  //category
-  int selectedCategoryIndex = 0;
-  final List<String> jadwalMatakuliah = [
-    "Senin",
-    "Selasa",
-    "Rabu",
-    "Kamis",
-    "Jumat"
-  ];
+  final JadwalMahasiswaController controller =
+      Get.put(JadwalMahasiswaController());
+  int selectedDayIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -74,51 +54,51 @@ class _JadwalpageMahasiswaState extends State<JadwalpageMahasiswa> {
               const SizedBox(
                 height: 20,
               ),
-              Container(
+              SizedBox(
                 height: 40,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: jadwalMatakuliah.length,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedCategoryIndex = index;
-                        });
-                      },
-                      child: Builder(
-                        builder: (BuildContext context) {
-                          bool isSelected = index == selectedCategoryIndex;
-                          Color backgroundColor = isSelected
-                              ? Palette.pinkDark.withOpacity(0.3)
-                              : Palette.white;
-                          Color textColor =
-                              isSelected ? Palette.red : Palette.black;
-                          return Container(
+                child: Obx(
+                  () {
+                    return ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: controller.jadwalMatakuliah.length,
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectedDayIndex = index;
+                            });
+                          },
+                          child: Container(
                             alignment: Alignment.center,
                             margin: EdgeInsets.only(
                               left: 10,
-                              right:
-                                  index == jadwalMatakuliah.length - 1 ? 20 : 0,
+                              right: index ==
+                                      controller.jadwalMatakuliah.length - 1
+                                  ? 10
+                                  : 0,
                             ),
                             padding: const EdgeInsets.symmetric(horizontal: 50),
                             decoration: BoxDecoration(
-                              color: backgroundColor,
+                              color: index == selectedDayIndex
+                                  ? Palette.pinkDark.withOpacity(0.3)
+                                  : Palette.white,
                               borderRadius: BorderRadius.circular(12),
-                              border: isSelected
+                              border: index == selectedDayIndex
                                   ? null
                                   : Border.all(color: Palette.black),
                             ),
                             child: Text(
-                              jadwalMatakuliah[index],
+                              controller.jadwalMatakuliah[index],
                               style: TextStyle(
-                                color: textColor,
+                                color: index == selectedDayIndex
+                                    ? Palette.red
+                                    : Palette.black,
                                 fontSize: 12,
                               ),
                             ),
-                          );
-                        },
-                      ),
+                          ),
+                        );
+                      },
                     );
                   },
                 ),
@@ -126,24 +106,71 @@ class _JadwalpageMahasiswaState extends State<JadwalpageMahasiswa> {
               const SizedBox(
                 height: 30,
               ),
-              Column(
-                children: schedules.map((schedule) {
-                  return Container(
-                    margin: const EdgeInsets.symmetric(vertical: 10),
-                    child: ScheduleCard(
-                      title: schedule.title,
-                      time: schedule.time,
-                      code: schedule.code,
-                      subtitle: schedule.subtitle,
-                      label: schedule.label,
-                    ),
+              Obx(
+                () {
+                  if (controller.isLoading.value) {
+                    return const Center(
+                      child: CircularProgressIndicator(
+                        color: Palette.red,
+                      ),
+                    );
+                  }
+                  final List<KelasKuliah>? kelasKuliahs =
+                      controller.krsModel.value?.kartuRencanaStudi.kelasKuliahs;
+                  return Column(
+                    children: _buildScheduleCards(kelasKuliahs),
                   );
-                }).toList(),
-              )
+                },
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  List<Widget> _buildScheduleCards(List<KelasKuliah>? kelasKuliahs) {
+    if (kelasKuliahs != null && kelasKuliahs.isNotEmpty) {
+      final filteredKelas = kelasKuliahs.where((kelas) => kelas.jadwalKuliahs
+          .any((jadwal) => jadwal.dayOfWeek == selectedDayIndex + 1));
+
+      if (filteredKelas.isNotEmpty) {
+        return filteredKelas
+            .map((kelas) => Container(
+                  margin: const EdgeInsets.only(bottom: 20),
+                  child: ScheduleCard(
+                    title: kelas.mataKuliah.namaResmi,
+                    time: _buildClassSchedule(kelas.jadwalKuliahs),
+                    code: kelas.mataKuliah.kode,
+                    subtitle: kelas.jadwalKuliahs[0].ruang.nama,
+                    label: kelas.mataKuliah.mataKuliahSifat.nama,
+                  ),
+                ))
+            .toList();
+      }
+    }
+
+    return [
+      const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'No schedule available',
+              style: TextStyle(color: Palette.red),
+            ),
+          ],
+        ),
+      )
+    ];
+  }
+
+  String _buildClassSchedule(List<JadwalKuliah> schedules) {
+    if (schedules.isNotEmpty) {
+      final startTime = schedules[0].startTime;
+      final endTime = schedules[schedules.length - 1].endTime;
+      return '$startTime - $endTime';
+    }
+    return 'No Schedule';
   }
 }

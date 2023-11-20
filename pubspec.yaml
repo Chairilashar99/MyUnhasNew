@@ -23,6 +23,7 @@ dependencies:
   flutter_spinkit: ^5.2.0
   flutter_form_builder: ^9.1.1
   form_builder_validators: ^9.1.0
+  syncfusion_flutter_pdfviewer: ^22.2.12
 
   table_calendar: ^3.0.9
   url_launcher: ^6.1.14
@@ -46,3 +47,5 @@ flutter:
 
     - assets/icons/
     - assets/images/
+
+    - assets/panduan.pdf
