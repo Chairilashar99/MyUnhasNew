@@ -97,8 +97,6 @@ class GrafikpageMahasiswaController extends GetxController {
     try {
       isLoading.value = true;
       final response = await SemesterService().getSemester();
-      // print('Response status code: ${response.statusCode}');
-      // print('Response body: ${response.body}');
 
       if (response.statusCode == 401 || response.statusCode == 403) {
         logout();
@@ -128,8 +126,6 @@ class GrafikpageMahasiswaController extends GetxController {
     try {
       isLoading.value = true;
       final response = await ProfileMahasiswaSevice().getProfile();
-      // print('Response status code: ${response.statusCode}');
-      // print('Response body: ${response.body}');
 
       if (response.statusCode == 401 || response.statusCode == 403) {
         logout();

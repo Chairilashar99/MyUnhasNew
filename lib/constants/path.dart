@@ -13,8 +13,10 @@ const getIndeksPrestasiPath = "$baseUrl/api/mahasiswa/indeks_prestasi/current";
 const getKhsPath = "$baseUrl/api/mahasiswa/kartu_hasil_studi";
 
 //KRS Mahasiswa untuk Jadwal Matakuliah
+// const getKrsPath =
+//     "$baseUrl/api/mahasiswa/belanja_krs/kartu_rencana_studi_semester?id_semester=51";
 const getKrsPath =
-    "$baseUrl/api/mahasiswa/belanja_krs/kartu_rencana_studi_semester?id_semester=51";
+    "$baseUrl/api/mahasiswa/belanja_krs/kartu_rencana_studi_semester";
 
 //Semester
 const getSemesterPath = "$baseUrl/api/mahasiswa/semester";

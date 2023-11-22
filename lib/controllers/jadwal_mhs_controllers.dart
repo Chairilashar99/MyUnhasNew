@@ -31,19 +31,25 @@ class JadwalMahasiswaController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    fetchKrs();
     fetchSemester();
     fetchProfileData();
   }
 
-  Future<void> fetchKrs() async {
+  void fetchDataForSelectedSemester(String idSemester) {
+    fetchKrs(idSemester: idSemester);
+  }
+
+  Future<void> fetchKrs({required String idSemester}) async {
     try {
       isLoading.value = true;
-      final response = await KrsService().getKrs();
+      final response = await KrsService().getKrs({'id_semester': idSemester});
+      print('Response status code: ${response.statusCode}');
+      print('Response body: ${response.body}');
 
       if (response.statusCode == 401 || response.statusCode == 403) {
         logout();
       }
+
       if (response.statusCode == 200) {
         final Map<String, dynamic>? responseBody = json.decode(response.body);
 
@@ -52,6 +58,12 @@ class JadwalMahasiswaController extends GetxController {
           final data = KrsModel.fromJson(responseBody);
           krsModel.value = data;
           print('KrsModel data: $data');
+
+          if (krsModel.value != null) {
+            print('Data sudah ada untuk semester dengan id: $idSemester');
+          } else {
+            print('Data belum ada untuk semester dengan id: $idSemester');
+          }
         } else {
           print('Body respons null');
         }
@@ -80,12 +92,22 @@ class JadwalMahasiswaController extends GetxController {
         if (responseBody != null) {
           final data = SemesterModel.fromJson(responseBody);
           semesterModel.value = data;
+
+          if (semesterModel.value != null &&
+              semesterModel.value!.semesters.isNotEmpty) {
+            String idSemester = semesterModel.value!.semesters[0].id.toString();
+            print('ID Semester: $idSemester');
+
+            fetchDataForSelectedSemester(idSemester);
+          } else {
+            print('Data semester tidak lengkap');
+          }
         } else {
           print('Response body is null');
         }
       } else {
         print(
-            'Failed to load semester data. Status Code: ${response.statusCode}');
+            'Gagal memuat data semester. Kode Status: ${response.statusCode}');
       }
     } catch (error) {
       print('Error: $error');
@@ -115,8 +137,7 @@ class JadwalMahasiswaController extends GetxController {
           print('Response body is null');
         }
       } else {
-        print(
-            'Failed to load profile data. Status Code: ${response.statusCode}');
+        print('Gagal memuat data profil. Kode Status: ${response.statusCode}');
       }
     } finally {
       isLoading.value = false;
