@@ -18,3 +18,27 @@ void logout() async {
   Get.deleteAll();
   Get.offAllNamed("/welcome");
 }
+
+String getPeriod() {
+  DateTime now = DateTime.now();
+  int currentYear = now.year;
+  int currentMonth = now.month;
+
+  // priode pertama januari sampe juni
+  if (currentMonth >= 1 && currentMonth <= 6) {
+    int startYear = currentYear - 1;
+    int endYear = currentYear;
+    String startSemester = 'Semester Akhir';
+    String endSemester = '';
+    return '$startSemester $startYear/$endSemester$endYear';
+    //peridoe kedua juli sampe desember
+  } else if (currentMonth >= 7 && currentMonth <= 12) {
+    int startYear = currentYear;
+    int endYear = currentYear + 1;
+    String startSemester = 'Semester Awal';
+    String endSemester = '';
+    return '$startSemester $startYear/$endSemester$endYear';
+  } else {
+    return 'Periode Tidak Diketahui';
+  }
+}

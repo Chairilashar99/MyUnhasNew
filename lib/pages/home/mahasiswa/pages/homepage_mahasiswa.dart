@@ -7,6 +7,7 @@ import 'package:my_unhas_new/constants/text_const.dart';
 import 'package:my_unhas_new/controllers/profile_mhs_controllers.dart';
 import 'package:my_unhas_new/pages/widgets/menu_card.dart';
 import 'package:my_unhas_new/pages/widgets/pdf_viewer.dart';
+import 'package:my_unhas_new/utils/utility.dart';
 
 class HomepageMahasiswa extends StatelessWidget {
   final ProfileMahasiswaController controller =
@@ -100,7 +101,7 @@ class HomepageMahasiswa extends StatelessWidget {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              'Semester Awal 2023/2024',
+                              getPeriod(),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: kTextTheme.titleMedium?.copyWith(

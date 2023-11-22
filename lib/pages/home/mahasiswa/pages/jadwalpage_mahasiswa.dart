@@ -28,28 +28,56 @@ class _JadwalpageMahasiswaState extends State<JadwalpageMahasiswa> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Flexible(
-                child: RichText(
-                  text: TextSpan(
-                    style: kTextTheme.titleSmall?.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'Jadwal Matakuliah | ',
+              Obx(
+                () {
+                  final semesters = controller.semesterModel.value?.semesters;
+                  final mahasiswa = controller.profileMahasiswa.value?.angkatan;
+
+                  if (semesters != null && mahasiswa != null) {
+                    final currentSemester = semesters[0].tahun is int
+                        ? semesters[0].tahun
+                        : int.parse(semesters[0].tahun.toString());
+                    final angkatan = int.parse(mahasiswa.toString());
+                    final sisaSemester =
+                        int.parse(semesters[0].kode.substring(0, 4));
+
+                    final currentSemesterMinusOne = currentSemester - 1;
+                    final angkatanPlusOne = angkatan;
+                    final semesterValue = currentSemesterMinusOne -
+                        angkatanPlusOne * 2 +
+                        1 +
+                        sisaSemester;
+
+                    return RichText(
+                      text: TextSpan(
                         style: kTextTheme.titleSmall?.copyWith(
-                          color: Palette.black,
+                          fontWeight: FontWeight.w600,
                         ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Jadwal Matakuliah | ',
+                            style: kTextTheme.titleSmall?.copyWith(
+                              color: Palette.black,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Semester $semesterValue',
+                            style: kTextTheme.titleSmall?.copyWith(
+                              color: Palette.red,
+                            ),
+                          ),
+                        ],
                       ),
-                      TextSpan(
-                        text: 'Semester 7',
-                        style: kTextTheme.titleSmall?.copyWith(
-                          color: Palette.red,
-                        ),
+                    );
+                  } else {
+                    return const Text(
+                      "-",
+                      style: TextStyle(
+                        color: Palette.red,
                       ),
-                    ],
-                  ),
-                ),
+                    );
+                  }
+                },
               ),
               const SizedBox(
                 height: 20,

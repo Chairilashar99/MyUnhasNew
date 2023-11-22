@@ -18,24 +18,6 @@ import 'package:my_unhas_new/pages/menu/mahasiswa/profile/screens/change_passwor
 import 'package:my_unhas_new/pages/menu/mahasiswa/profile/screens/personal_data_screen.dart';
 import 'package:my_unhas_new/pages/menu/wali/profile/change_password_screen_wali.dart';
 import 'package:my_unhas_new/pages/routing_view.dart';
-// import 'package:my_unhas_new/services/auth_service.dart';
-
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   AuthService authService = AuthService();
-//   var requestData = {
-//     'username': 'adminmkpk',
-//     'password': 'adm1nMKPK@Unh45',
-//   };
-//   var response = await authService.login(requestData);
-
-//   if (response.statusCode == 200) {
-//     print(response.body);
-//     runApp(const MyApp());
-//   } else {
-//     print('Gagal login. Status Code: ${response.statusCode}');
-//   }
-// }
 
 void main() {
   runApp(const MyApp());
