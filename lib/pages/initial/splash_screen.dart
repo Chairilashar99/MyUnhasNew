@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 5), () async {
       if (await TokenManager.getAccessToken() != null) {
-        Get.offNamed('/homescreen-mahasiswa');
+        Get.offNamed('/homescreen-wali');
       } else {
         Get.offNamed('/welcome');
       }

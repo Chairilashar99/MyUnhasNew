@@ -25,11 +25,11 @@ class _HomescreenWaliState extends State<HomescreenWali> {
   Widget build(BuildContext context) {
     final ValueNotifier<int> _selectedIndex = ValueNotifier(0);
     final pages = [
-      const HomepageWali(),
+      HomepageWali(),
       const GrafikPageWali(),
       const JadwalPageWali(),
       const KalenderPageWali(),
-      const ProfilePageWali(),
+      ProfilePageWali(),
     ];
     return ValueListenableBuilder(
       valueListenable: _selectedIndex,
@@ -114,7 +114,7 @@ class _HomescreenWaliState extends State<HomescreenWali> {
           body: pages[value],
           bottomNavigationBar: CustomNavigationBar(
             value: value,
-            listIcons: [
+            listIcons: const [
               Iconsax.home5,
               Iconsax.chart_215,
               Iconsax.note_add5,

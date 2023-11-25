@@ -24,3 +24,7 @@ const getSemesterPath = "$baseUrl/api/mahasiswa/semester";
 //Transkrip
 const getTranskripPath =
     "$baseUrl/api/mahasiswa/transkrip/getTranskripMahasiswa";
+
+//Pembayaran
+const getPembayaranPath =
+    "$baseUrl/api/mahasiswa/pembayaran/getStatusPembayaran";

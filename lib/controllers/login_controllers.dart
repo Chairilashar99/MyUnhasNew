@@ -51,7 +51,7 @@ class LoginController extends GetxController {
         var responseBody = jsonDecode(response.body);
         TokenManager.setAccessToken(responseBody["access_token"]);
         TokenManager.setRefreshToken(responseBody["refresh_token"]);
-        Get.offAllNamed("/homescreen-mahasiswa");
+        Get.offAllNamed("/homescreen-wali");
         Get.delete<LoginController>();
       } else {
         var responseBody = jsonDecode(response.body);

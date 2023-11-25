@@ -36,7 +36,7 @@ class HomepageMahasiswa extends StatelessWidget {
               children: [
                 Flexible(
                   child: Text(
-                    'Selamat Siang',
+                    getGreeting(),
                     style: kTextTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.w600,
                     ),
