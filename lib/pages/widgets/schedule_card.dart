@@ -21,7 +21,7 @@ class ScheduleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 130,
+      height: 150,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Palette.pinkDark.withOpacity(0.3),

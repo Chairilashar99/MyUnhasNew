@@ -30,8 +30,12 @@ class TranskripModel {
       };
 }
 
+enum Nim { D121201099 }
+
+final nimValues = EnumValues({"D121201099": Nim.D121201099});
+
 class Mahasiswa {
-  // final dynamic deletedAt;
+  final dynamic deletedAt;
   final int id;
   final int idUser;
   final int idProdi;
@@ -43,29 +47,30 @@ class Mahasiswa {
   final int rw;
   final String dusun;
   final String kodePos;
-  // final dynamic nisn;
-  // final String tempatLahir;
-  // final dynamic tanggalLahir;
-  // final String telepon;
-  // final dynamic handphone;
-  // final dynamic idAgama;
+  final String nisn;
+  final String tempatLahir;
+  final DateTime tanggalLahir;
+  final String telepon;
+  final String handphone;
+  final dynamic idAgama;
   final int idProdiJenjang;
   final String kelurahan;
-  // final dynamic idWilayah;
-  // final dynamic nik;
+  final String idWilayah;
+  final String nik;
   final String jenisKelamin;
   final int isActive;
-  // final int updatedBy;
-  final String kodeStatus;
+  final int updatedBy;
+  final KodeStatus kodeStatus;
   final String email;
   final int isTamu;
-  final dynamic idMahasiswaPddikti;
-  final dynamic idRegistrasiMahasiswaPddikti;
-  // final dynamic spp;
+  final String idMahasiswaPddikti;
+  final String idRegistrasiMahasiswaPddikti;
+  final dynamic spp;
   final Prodi prodi;
+  final ProdiJenjang prodiJenjang;
 
   Mahasiswa({
-    // required this.deletedAt,
+    required this.deletedAt,
     required this.id,
     required this.idUser,
     required this.idProdi,
@@ -77,26 +82,27 @@ class Mahasiswa {
     required this.rw,
     required this.dusun,
     required this.kodePos,
-    // required this.nisn,
-    // required this.tempatLahir,
-    // required this.tanggalLahir,
-    // required this.telepon,
-    // required this.handphone,
-    // required this.idAgama,
+    required this.nisn,
+    required this.tempatLahir,
+    required this.tanggalLahir,
+    required this.telepon,
+    required this.handphone,
+    required this.idAgama,
     required this.idProdiJenjang,
     required this.kelurahan,
-    // required this.idWilayah,
-    // required this.nik,
+    required this.idWilayah,
+    required this.nik,
     required this.jenisKelamin,
     required this.isActive,
-    // required this.updatedBy,
+    required this.updatedBy,
     required this.kodeStatus,
     required this.email,
     required this.isTamu,
     required this.idMahasiswaPddikti,
     required this.idRegistrasiMahasiswaPddikti,
-    // required this.spp,
+    required this.spp,
     required this.prodi,
+    required this.prodiJenjang,
   });
 
   factory Mahasiswa.fromRawJson(String str) =>
@@ -105,7 +111,7 @@ class Mahasiswa {
   String toRawJson() => json.encode(toJson());
 
   factory Mahasiswa.fromJson(Map<String, dynamic> json) => Mahasiswa(
-        // deletedAt: json["deleted_at"],
+        deletedAt: json["deleted_at"],
         id: json["id"],
         idUser: json["id_user"],
         idProdi: json["id_prodi"],
@@ -117,30 +123,31 @@ class Mahasiswa {
         rw: json["rw"],
         dusun: json["dusun"],
         kodePos: json["kode_pos"],
-        // nisn: json["nisn"],
-        // tempatLahir: json["tempat_lahir"],
-        // tanggalLahir: json["tanggal_lahir"],
-        // telepon: json["telepon"],
-        // handphone: json["handphone"],
-        // idAgama: json["id_agama"],
+        nisn: json["nisn"],
+        tempatLahir: json["tempat_lahir"],
+        tanggalLahir: DateTime.parse(json["tanggal_lahir"]),
+        telepon: json["telepon"],
+        handphone: json["handphone"],
+        idAgama: json["id_agama"],
         idProdiJenjang: json["id_prodi_jenjang"],
         kelurahan: json["kelurahan"],
-        // idWilayah: json["id_wilayah"],
-        // nik: json["nik"],
+        idWilayah: json["id_wilayah"],
+        nik: json["nik"],
         jenisKelamin: json["jenis_kelamin"],
         isActive: json["is_active"],
-        // updatedBy: json["updated_by"],
-        kodeStatus: json["kode_status"],
+        updatedBy: json["updated_by"],
+        kodeStatus: kodeStatusValues.map[json["kode_status"]]!,
         email: json["email"],
         isTamu: json["is_tamu"],
         idMahasiswaPddikti: json["id_mahasiswa_pddikti"],
         idRegistrasiMahasiswaPddikti: json["id_registrasi_mahasiswa_pddikti"],
-        // spp: json["spp"],
+        spp: json["spp"],
         prodi: Prodi.fromJson(json["prodi"]),
+        prodiJenjang: ProdiJenjang.fromJson(json["prodi_jenjang"]),
       );
 
   Map<String, dynamic> toJson() => {
-        // "deleted_at": deletedAt,
+        "deleted_at": deletedAt,
         "id": id,
         "id_user": idUser,
         "id_prodi": idProdi,
@@ -152,32 +159,40 @@ class Mahasiswa {
         "rw": rw,
         "dusun": dusun,
         "kode_pos": kodePos,
-        // "nisn": nisn,
-        // "tempat_lahir": tempatLahir,
-        // "tanggal_lahir": tanggalLahir,
-        // "telepon": telepon,
-        // "handphone": handphone,
-        // "id_agama": idAgama,
+        "nisn": nisn,
+        "tempat_lahir": tempatLahir,
+        "tanggal_lahir":
+            "${tanggalLahir.year.toString().padLeft(4, '0')}-${tanggalLahir.month.toString().padLeft(2, '0')}-${tanggalLahir.day.toString().padLeft(2, '0')}",
+        "telepon": telepon,
+        "handphone": handphone,
+        "id_agama": idAgama,
         "id_prodi_jenjang": idProdiJenjang,
         "kelurahan": kelurahan,
-        // "id_wilayah": idWilayah,
-        // "nik": nik,
+        "id_wilayah": idWilayah,
+        "nik": nik,
         "jenis_kelamin": jenisKelamin,
         "is_active": isActive,
-        // "updated_by": updatedBy,
-        "kode_status": kodeStatus,
+        "updated_by": updatedBy,
+        "kode_status": kodeStatusValues.reverse[kodeStatus],
         "email": email,
         "is_tamu": isTamu,
         "id_mahasiswa_pddikti": idMahasiswaPddikti,
         "id_registrasi_mahasiswa_pddikti": idRegistrasiMahasiswaPddikti,
-        // "spp": spp,
+        "spp": spp,
         "prodi": prodi.toJson(),
+        "prodi_jenjang": prodiJenjang.toJson(),
       };
 }
 
-enum Nim { D42114005 }
+enum KodeStatus { A, B, C, KODE_STATUS_A, KODE_STATUS_B }
 
-final nimValues = EnumValues({"D42114005": Nim.D42114005});
+final kodeStatusValues = EnumValues({
+  "A-": KodeStatus.A,
+  "B": KodeStatus.B,
+  "C+": KodeStatus.C,
+  "A": KodeStatus.KODE_STATUS_A,
+  "B+": KodeStatus.KODE_STATUS_B
+});
 
 class Prodi {
   final int id;
@@ -185,7 +200,7 @@ class Prodi {
   final String namaResmi;
   final String namaSingkat;
   final String namaAsing;
-  // final dynamic namaAsingSingkat;
+  final dynamic namaAsingSingkat;
   final int isEksakta;
   final String alamat;
   final String nomorTelepon;
@@ -195,6 +210,7 @@ class Prodi {
   final DateTime updatedAt;
   final int isActive;
   final String idPddikti;
+  final Fakultas fakultas;
 
   Prodi({
     required this.id,
@@ -202,7 +218,7 @@ class Prodi {
     required this.namaResmi,
     required this.namaSingkat,
     required this.namaAsing,
-    // required this.namaAsingSingkat,
+    required this.namaAsingSingkat,
     required this.isEksakta,
     required this.alamat,
     required this.nomorTelepon,
@@ -212,6 +228,7 @@ class Prodi {
     required this.updatedAt,
     required this.isActive,
     required this.idPddikti,
+    required this.fakultas,
   });
 
   factory Prodi.fromRawJson(String str) => Prodi.fromJson(json.decode(str));
@@ -224,7 +241,7 @@ class Prodi {
         namaResmi: json["nama_resmi"],
         namaSingkat: json["nama_singkat"],
         namaAsing: json["nama_asing"],
-        // namaAsingSingkat: json["nama_asing_singkat"],
+        namaAsingSingkat: json["nama_asing_singkat"],
         isEksakta: json["is_eksakta"],
         alamat: json["alamat"],
         nomorTelepon: json["nomor_telepon"],
@@ -234,6 +251,7 @@ class Prodi {
         updatedAt: DateTime.parse(json["updated_at"]),
         isActive: json["is_active"],
         idPddikti: json["id_pddikti"],
+        fakultas: Fakultas.fromJson(json["fakultas"]),
       );
 
   Map<String, dynamic> toJson() => {
@@ -242,7 +260,7 @@ class Prodi {
         "nama_resmi": namaResmi,
         "nama_singkat": namaSingkat,
         "nama_asing": namaAsing,
-        // "nama_asing_singkat": namaAsingSingkat,
+        "nama_asing_singkat": namaAsingSingkat,
         "is_eksakta": isEksakta,
         "alamat": alamat,
         "nomor_telepon": nomorTelepon,
@@ -252,6 +270,105 @@ class Prodi {
         "updated_at": updatedAt.toIso8601String(),
         "is_active": isActive,
         "id_pddikti": idPddikti,
+        "fakultas": fakultas.toJson(),
+      };
+}
+
+class Fakultas {
+  final int id;
+  final String namaResmi;
+  final String namaSingkat;
+  final String namaAsing;
+  final dynamic namaAsingSingkat;
+  final dynamic alamat;
+  final String nomorTelepon;
+  final String fax;
+  final String email;
+  final String website;
+  final String kode;
+
+  Fakultas({
+    required this.id,
+    required this.namaResmi,
+    required this.namaSingkat,
+    required this.namaAsing,
+    required this.namaAsingSingkat,
+    required this.alamat,
+    required this.nomorTelepon,
+    required this.fax,
+    required this.email,
+    required this.website,
+    required this.kode,
+  });
+
+  factory Fakultas.fromRawJson(String str) =>
+      Fakultas.fromJson(json.decode(str));
+
+  String toRawJson() => json.encode(toJson());
+
+  factory Fakultas.fromJson(Map<String, dynamic> json) => Fakultas(
+        id: json["id"],
+        namaResmi: json["nama_resmi"],
+        namaSingkat: json["nama_singkat"],
+        namaAsing: json["nama_asing"],
+        namaAsingSingkat: json["nama_asing_singkat"],
+        alamat: json["alamat"],
+        nomorTelepon: json["nomor_telepon"],
+        fax: json["fax"],
+        email: json["email"],
+        website: json["website"],
+        kode: json["kode"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "nama_resmi": namaResmi,
+        "nama_singkat": namaSingkat,
+        "nama_asing": namaAsing,
+        "nama_asing_singkat": namaAsingSingkat,
+        "alamat": alamat,
+        "nomor_telepon": nomorTelepon,
+        "fax": fax,
+        "email": email,
+        "website": website,
+        "kode": kode,
+      };
+}
+
+class ProdiJenjang {
+  final int id;
+  final String kode;
+  final String nama;
+  final int maxSks;
+  final int maxSemester;
+
+  ProdiJenjang({
+    required this.id,
+    required this.kode,
+    required this.nama,
+    required this.maxSks,
+    required this.maxSemester,
+  });
+
+  factory ProdiJenjang.fromRawJson(String str) =>
+      ProdiJenjang.fromJson(json.decode(str));
+
+  String toRawJson() => json.encode(toJson());
+
+  factory ProdiJenjang.fromJson(Map<String, dynamic> json) => ProdiJenjang(
+        id: json["id"],
+        kode: json["kode"],
+        nama: json["nama"],
+        maxSks: json["max_sks"],
+        maxSemester: json["max_semester"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "kode": kode,
+        "nama": nama,
+        "max_sks": maxSks,
+        "max_semester": maxSemester,
       };
 }
 
@@ -260,23 +377,23 @@ class Transkrip {
   final int idMahasiswa;
   final Nim nim;
   final int idSemester;
-  // final int idKelasKuliah;
-  // final int idMataKuliah;
+  final int idKelasKuliah;
+  final int idMataKuliah;
   final String kodeMataKuliah;
   final String namaMataKuliah;
-  // final String namaAsingMataKuliah;
+  final String namaAsingMataKuliah;
   final String nilaiAngka;
-  final NilaiHuruf nilaiHuruf;
+  final KodeStatus nilaiHuruf;
   final int sks;
   final String totalNilai;
   final int isUsed;
   final int isVerified;
   final int isGtakademik;
-  // final int updatedBy;
-  // final DateTime createdAt;
-  final DateTime updatedAt;
+  final dynamic updatedBy;
+  final dynamic createdAt;
+  final dynamic updatedAt;
   final int isManual;
-  // final dynamic isAlihKredit;
+  final dynamic isAlihKredit;
   final int isLocked;
 
   Transkrip({
@@ -284,11 +401,11 @@ class Transkrip {
     required this.idMahasiswa,
     required this.nim,
     required this.idSemester,
-    // required this.idKelasKuliah,
-    // required this.idMataKuliah,
+    required this.idKelasKuliah,
+    required this.idMataKuliah,
     required this.kodeMataKuliah,
     required this.namaMataKuliah,
-    // required this.namaAsingMataKuliah,
+    required this.namaAsingMataKuliah,
     required this.nilaiAngka,
     required this.nilaiHuruf,
     required this.sks,
@@ -296,11 +413,11 @@ class Transkrip {
     required this.isUsed,
     required this.isVerified,
     required this.isGtakademik,
-    // required this.updatedBy,
-    // required this.createdAt,
+    required this.updatedBy,
+    required this.createdAt,
     required this.updatedAt,
     required this.isManual,
-    // required this.isAlihKredit,
+    required this.isAlihKredit,
     required this.isLocked,
   });
 
@@ -314,23 +431,23 @@ class Transkrip {
         idMahasiswa: json["id_mahasiswa"],
         nim: nimValues.map[json["nim"]]!,
         idSemester: json["id_semester"],
-        // idKelasKuliah: json["id_kelas_kuliah"],
-        // idMataKuliah: json["id_mata_kuliah"],
+        idKelasKuliah: json["id_kelas_kuliah"],
+        idMataKuliah: json["id_mata_kuliah"],
         kodeMataKuliah: json["kode_mata_kuliah"],
         namaMataKuliah: json["nama_mata_kuliah"],
-        // namaAsingMataKuliah: json["nama_asing_mata_kuliah"],
+        namaAsingMataKuliah: json["nama_asing_mata_kuliah"],
         nilaiAngka: json["nilai_angka"],
-        nilaiHuruf: nilaiHurufValues.map[json["nilai_huruf"]]!,
+        nilaiHuruf: kodeStatusValues.map[json["nilai_huruf"]]!,
         sks: json["sks"],
         totalNilai: json["total_nilai"],
         isUsed: json["is_used"],
         isVerified: json["is_verified"],
         isGtakademik: json["is_gtakademik"],
-        // updatedBy: json["updated_by"],
-        // createdAt: DateTime.parse(json["created_at"]),
-        updatedAt: DateTime.parse(json["updated_at"]),
+        updatedBy: json["updated_by"],
+        createdAt: json["created_at"],
+        updatedAt: json["updated_at"],
         isManual: json["is_manual"],
-        // isAlihKredit: json["is_alih_kredit"],
+        isAlihKredit: json["is_alih_kredit"],
         isLocked: json["is_locked"],
       );
 
@@ -339,35 +456,26 @@ class Transkrip {
         "id_mahasiswa": idMahasiswa,
         "nim": nimValues.reverse[nim],
         "id_semester": idSemester,
-        // "id_kelas_kuliah": idKelasKuliah,
-        // "id_mata_kuliah": idMataKuliah,
+        "id_kelas_kuliah": idKelasKuliah,
+        "id_mata_kuliah": idMataKuliah,
         "kode_mata_kuliah": kodeMataKuliah,
         "nama_mata_kuliah": namaMataKuliah,
-        // "nama_asing_mata_kuliah": namaAsingMataKuliah,
+        "nama_asing_mata_kuliah": namaAsingMataKuliah,
         "nilai_angka": nilaiAngka,
-        "nilai_huruf": nilaiHurufValues.reverse[nilaiHuruf],
+        "nilai_huruf": kodeStatusValues.reverse[nilaiHuruf],
         "sks": sks,
         "total_nilai": totalNilai,
         "is_used": isUsed,
         "is_verified": isVerified,
         "is_gtakademik": isGtakademik,
-        // "updated_by": updatedBy,
-        // "created_at": createdAt.toIso8601String(),
-        "updated_at": updatedAt.toIso8601String(),
+        "updated_by": updatedBy,
+        "created_at": createdAt,
+        "updated_at": updatedAt,
         "is_manual": isManual,
-        // "is_alih_kredit": isAlihKredit,
+        "is_alih_kredit": isAlihKredit,
         "is_locked": isLocked,
       };
 }
-
-enum NilaiHuruf { A, B, NILAI_HURUF_A, NILAI_HURUF_B }
-
-final nilaiHurufValues = EnumValues({
-  "A": NilaiHuruf.A,
-  "B+": NilaiHuruf.B,
-  "A-": NilaiHuruf.NILAI_HURUF_A,
-  "B": NilaiHuruf.NILAI_HURUF_B
-});
 
 class EnumValues<T> {
   Map<String, T> map;

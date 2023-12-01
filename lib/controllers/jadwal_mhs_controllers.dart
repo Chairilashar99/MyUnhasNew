@@ -43,6 +43,7 @@ class JadwalMahasiswaController extends GetxController {
     try {
       isLoading.value = true;
       final response = await KrsService().getKrs({'id_semester': idSemester});
+      print(idSemester);
       print('Response status code: ${response.statusCode}');
       print('Response body: ${response.body}');
 

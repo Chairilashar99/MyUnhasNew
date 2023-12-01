@@ -28,3 +28,6 @@ const getTranskripPath =
 //Pembayaran
 const getPembayaranPath =
     "$baseUrl/api/mahasiswa/pembayaran/getStatusPembayaran";
+
+//Jadwal Dosen
+const getJadwalDosenPath = "$baseUrl/api/dosen/mata_kuliah/ampu";

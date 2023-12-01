@@ -29,12 +29,35 @@ class _SplashScreenState extends State<SplashScreen> {
   //   });
   // }
 
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   Timer(const Duration(seconds: 5), () async {
+  //     if (await TokenManager.getAccessToken() != null) {
+  //       Get.offNamed('/homescreen-wali');
+  //     }
+  //     if (await TokenManager.getAccessToken() != null) {
+  //       Get.offNamed('/homescreen-dosen');
+  //     }
+  //     if (await TokenManager.getAccessToken() != null) {
+  //       Get.offNamed('/homescreen-mahasiswa');
+  //     } else {
+  //       Get.offNamed('/welcome');
+  //     }
+  //   });
+  // }
+
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 5), () async {
-      if (await TokenManager.getAccessToken() != null) {
+      var accessToken = await TokenManager.getAccessToken();
+      if (accessToken != null) {
         Get.offNamed('/homescreen-wali');
+      } else if (accessToken != null) {
+        Get.offNamed('/homescreen-dosen');
+      } else if (accessToken != null) {
+        Get.offNamed('/homescreen-mahasiswa');
       } else {
         Get.offNamed('/welcome');
       }

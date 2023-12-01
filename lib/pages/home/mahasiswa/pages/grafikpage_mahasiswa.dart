@@ -38,6 +38,18 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
     controller = Get.put(GrafikpageMahasiswaController());
   }
 
+  String hitungSemester(int? tahun, int? semesterTahunAjaran) {
+    late int semesterValue;
+
+    final angaktanMahasiswa = controller.profileMahasiswa.value?.angkatan;
+
+    if (angaktanMahasiswa != null) {
+      semesterValue = (tahun! - angaktanMahasiswa) * 2 + semesterTahunAjaran!;
+    }
+
+    return "Semester $semesterValue";
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -87,17 +99,13 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
                                 : int.parse(semesters[0].tahun.toString());
                             final angkatan = int.parse(mahasiswa.toString());
                             final sisaSemester =
-                                int.parse(semesters[0].kode.substring(0, 4));
+                                int.parse(semesters[0].kode.substring(4, 5));
 
-                            final currentSemesterMinusOne = currentSemester - 1;
-                            print(
-                                'currentSemester - 1: $currentSemesterMinusOne');
-                            final angkatanPlusOne = angkatan;
-                            print('angkatan + 1: $angkatanPlusOne');
-                            final semesterValue = currentSemesterMinusOne -
-                                angkatanPlusOne * 2 +
-                                1 +
-                                sisaSemester;
+                            final semesterValue =
+                                (currentSemester.toInt() - angkatan.toInt()) *
+                                        2 +
+                                    1 +
+                                    sisaSemester.toInt();
                             print(
                                 'currentSemester: $currentSemester, angkatan: $angkatan, sisaSemester: $sisaSemester');
                             print('semesterValue: $semesterValue');
@@ -346,7 +354,8 @@ class _GrafikpageMahasiswaState extends State<GrafikpageMahasiswa> {
                           ColumnSeries<IndeksPrestasi, String>(
                             dataSource: khsData?.indeksPrestasis ?? [],
                             xValueMapper: (IndeksPrestasi data, _) =>
-                                '${data.tahun} ${data.semesterTahunAjaran}',
+                                hitungSemester(
+                                    data.tahun, data.semesterTahunAjaran),
                             yValueMapper: (IndeksPrestasi data, _) =>
                                 double.parse(
                                     data.indeksPrestasiSemester ?? '0.0'),

@@ -122,8 +122,8 @@ class _HomescreenDosenState extends State<HomescreenDosen> {
             ],
             listTitle: const [
               'Home',
-              'Jadwal Mengajar',
               'Kalender',
+              'Jadwal Mengajar',
               'Profile',
             ],
             selectedIndex: _selectedIndex,

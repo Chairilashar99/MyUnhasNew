@@ -39,14 +39,15 @@ class _JadwalpageMahasiswaState extends State<JadwalpageMahasiswa> {
                         : int.parse(semesters[0].tahun.toString());
                     final angkatan = int.parse(mahasiswa.toString());
                     final sisaSemester =
-                        int.parse(semesters[0].kode.substring(0, 4));
+                        int.parse(semesters[0].kode.substring(4, 5));
 
-                    final currentSemesterMinusOne = currentSemester - 1;
-                    final angkatanPlusOne = angkatan;
-                    final semesterValue = currentSemesterMinusOne -
-                        angkatanPlusOne * 2 +
-                        1 +
-                        sisaSemester;
+                    final semesterValue =
+                        (currentSemester.toInt() - angkatan.toInt()) * 2 +
+                            1 +
+                            sisaSemester.toInt();
+                    print(
+                        'currentSemester: $currentSemester, angkatan: $angkatan, sisaSemester: $sisaSemester');
+                    print('semesterValue: $semesterValue');
 
                     return RichText(
                       text: TextSpan(

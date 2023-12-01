@@ -15,15 +15,15 @@ class ProfileMahasiswaController extends GetxController {
   Rx<PembayaranModel?> pembayaranModel = Rx<PembayaranModel?>(null);
   Rx<SemesterModel?> semesterModel = Rx<SemesterModel?>(null);
 
-  RxList<int>? semesterValue;
+  RxList<int> semesterValue = <int>[].obs;
   RxBool isLoading = true.obs;
 
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
-    fetchProfileData();
-    fetchPembayaran();
-    fetchSemester();
+    await fetchProfileData();
+    await fetchSemester();
+    await fetchPembayaran();
   }
 
   Future<void> fetchProfileData() async {
@@ -102,7 +102,10 @@ class ProfileMahasiswaController extends GetxController {
         if (responseBody != null) {
           final data = SemesterModel.fromJson(responseBody);
           semesterModel.value = data;
-          updateSemesterValue();
+          print('Calling updateSemesterValue()');
+          await updateSemesterValue();
+
+          print('SemesterValue after update: ${semesterValue?.toList()}');
         } else {
           print('Response body is null');
         }
@@ -117,7 +120,7 @@ class ProfileMahasiswaController extends GetxController {
     }
   }
 
-  void updateSemesterValue() {
+  Future<void> updateSemesterValue() async {
     final semesters = semesterModel.value?.semesters;
     final mahasiswa = profileMahasiswa.value?.angkatan;
 
@@ -129,14 +132,12 @@ class ProfileMahasiswaController extends GetxController {
       final sisaSemester = int.parse(semesters[0].kode.substring(0, 4));
 
       final currentSemesterMinusOne = currentSemester - 1;
-      final angkatanPlusOne = angkatan;
+      final angkatans = angkatan;
 
-      semesterValue = List.generate(
+      semesterValue(List.generate(
         semesters.length,
-        (index) =>
-            currentSemesterMinusOne - angkatanPlusOne * 2 + 1 + sisaSemester,
-      ).obs;
-      update();
+        (index) => currentSemesterMinusOne - angkatans * 2 + 1 + sisaSemester,
+      ));
     }
   }
 }

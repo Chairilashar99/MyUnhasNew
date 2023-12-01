@@ -9,7 +9,7 @@ import 'package:my_unhas_new/pages/widgets/alert_bottomsheet.dart';
 import 'package:my_unhas_new/pages/widgets/blur_background_container.dart';
 
 class LoginModal extends StatelessWidget {
-  const LoginModal({Key? key}) : super(key: key);
+  const LoginModal({Key? key, required String userType}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

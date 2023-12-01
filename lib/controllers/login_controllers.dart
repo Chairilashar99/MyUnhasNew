@@ -32,7 +32,7 @@ class LoginController extends GetxController {
     if (password == null) {
       return false;
     }
-    return password.length >= 6;
+    return password.length >= 3;
   }
 
   Future<List<String>> login() async {
@@ -42,6 +42,29 @@ class LoginController extends GetxController {
     var password = passwordEditingController.text;
 
     var loginRequest = LoginRequest(username: username, password: password);
+    List<String> charakterDosen = [
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9'
+    ];
+
+    var userType = Get.arguments?["userType"];
+    var checkUserType = '';
+    var firstCharacterCheck = charakterDosen.contains(username.substring(0, 1));
+    if (firstCharacterCheck) {
+      checkUserType = 'dosen';
+    } else if (userType != 'dosen') {
+      checkUserType = userType;
+    }
+    print('test: $firstCharacterCheck');
+
     http.Response response;
     try {
       response = await authService.login(loginRequest);
@@ -51,8 +74,30 @@ class LoginController extends GetxController {
         var responseBody = jsonDecode(response.body);
         TokenManager.setAccessToken(responseBody["access_token"]);
         TokenManager.setRefreshToken(responseBody["refresh_token"]);
-        Get.offAllNamed("/homescreen-wali");
-        Get.delete<LoginController>();
+
+        print(userType != null && checkUserType == userType);
+        print('halo123: $checkUserType');
+        print('halo 12345: $userType');
+
+        if (userType != null && checkUserType == userType) {
+          print('Navigating to: /homescreen-$userType');
+          switch (userType) {
+            case 'mahasiswa':
+              Get.offAllNamed("/homescreen-mahasiswa");
+              break;
+            case 'wali':
+              Get.offAllNamed("/homescreen-wali");
+              break;
+            case 'dosen':
+              Get.offAllNamed("/homescreen-dosen");
+              break;
+            default:
+              Get.offAllNamed("/welcome");
+              break;
+          }
+        } else {
+          errors.add('These credentials do not match our records.');
+        }
       } else {
         var responseBody = jsonDecode(response.body);
         var message = responseBody["message"];

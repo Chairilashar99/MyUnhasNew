@@ -121,12 +121,13 @@ class HomepageMahasiswa extends StatelessWidget {
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      final titles = ["Neosia", "Sikola", "Neosia", "Neosia"];
+                      final titles = [
+                        "Neosia",
+                        "Sikola",
+                      ];
                       final url = [
                         "https://neosia.unhas.ac.id/",
                         "https://sikola.unhas.ac.id/",
-                        "https://neosia.unhas.ac.id/",
-                        "https://neosia.unhas.ac.id/"
                       ];
                       return MenuCard(
                         title: titles[index],
@@ -135,7 +136,7 @@ class HomepageMahasiswa extends StatelessWidget {
                     },
                     separatorBuilder: (context, index) =>
                         const SizedBox(width: 28),
-                    itemCount: 4,
+                    itemCount: 2,
                   ),
                 ),
                 const SizedBox(height: 24),

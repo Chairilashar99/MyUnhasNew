@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_unhas_new/constants/asset_path.dart';
 import 'package:my_unhas_new/constants/color_const.dart';
 import 'package:my_unhas_new/constants/text_const.dart';
@@ -24,10 +25,11 @@ class _WelcomePageState extends State<WelcomePage> {
       body: Stack(
         children: [
           Positioned.fill(
-              child: RiveAnimation.asset(
-            AssetPath.getRive('anim_bg.riv'),
-            fit: BoxFit.cover,
-          )),
+            child: RiveAnimation.asset(
+              AssetPath.getRive('anim_bg.riv'),
+              fit: BoxFit.cover,
+            ),
+          ),
           Positioned.fill(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
@@ -45,7 +47,6 @@ class _WelcomePageState extends State<WelcomePage> {
                   const SizedBox(
                     height: 16,
                   ),
-                  //   const AppBarTitle(),
                   Center(
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -70,12 +71,13 @@ class _WelcomePageState extends State<WelcomePage> {
                   const Spacer(),
                   SizedBox(
                     width: 310,
-                    child: Column(children: [
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      RichText(
-                        text: TextSpan(
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        RichText(
+                          text: TextSpan(
                             text: 'Sistem Kelola',
                             style: kTextTheme.displayLarge?.copyWith(
                               fontWeight: FontWeight.w600,
@@ -91,9 +93,11 @@ class _WelcomePageState extends State<WelcomePage> {
                                   color: Palette.red,
                                 ),
                               )
-                            ]),
-                      )
-                    ]),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 16,
@@ -104,76 +108,22 @@ class _WelcomePageState extends State<WelcomePage> {
                   const Spacer(
                     flex: 2,
                   ),
-                  Container(
-                    width: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Palette.white,
-                        boxShadow: [
-                          BoxShadow(
-                              offset: const Offset(0, 0),
-                              spreadRadius: 1,
-                              blurRadius: 6,
-                              color: const Color.fromARGB(255, 75, 63, 189)
-                                  .withOpacity(.2))
-                        ]),
-                    child: MaterialButton(
-                      onPressed: () {
-                        showGeneralDialog(
-                          context: context,
-                          barrierDismissible: true,
-                          transitionDuration: const Duration(
-                            milliseconds: 400,
-                          ),
-                          transitionBuilder:
-                              (context, animation, secondaryAnimation, child) {
-                            Tween<Offset> tween;
-                            tween = Tween(
-                                begin: const Offset(0, -1), end: Offset.zero);
-                            return SlideTransition(
-                              position: tween.animate(
-                                CurvedAnimation(
-                                  parent: animation,
-                                  curve: Curves.easeInOut,
-                                ),
-                              ),
-                              child: child,
-                            );
-                          },
-                          barrierLabel: 'Masuk',
-                          pageBuilder: (context, _, __) {
-                            print("Navigating to LoginModal");
-                            return const LoginModal();
-                          },
-                        );
-                      },
-                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          12,
-                        ),
-                      ),
-                      child: const Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.arrow_forward_rounded,
-                              size: 16,
-                            ),
-                            SizedBox(
-                              width: 8,
-                            ),
-                            Text(
-                              'Lanjutkan',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                  buildLoginButton(
+                    text: 'Masuk Sebagai Mahasiswa',
+                    userType: 'mahasiswa',
+                  ),
+                  const SizedBox(height: 10),
+                  buildLoginButton(
+                    text: 'Masuk Sebagai Wali',
+                    userType: 'wali',
+                  ),
+                  const SizedBox(height: 10),
+                  buildLoginButton(
+                    text: 'Masuk Sebagai Dosen',
+                    userType: 'dosen',
+                  ),
+                  const SizedBox(
+                    height: 16,
                   ),
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 12.0),
@@ -189,6 +139,54 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget buildLoginButton({required String text, required String userType}) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Palette.white,
+        boxShadow: [
+          BoxShadow(
+            offset: const Offset(0, 0),
+            spreadRadius: 1,
+            blurRadius: 6,
+            color: const Color.fromARGB(255, 75, 63, 189).withOpacity(.2),
+          ),
+        ],
+      ),
+      child: MaterialButton(
+        onPressed: () {
+          Get.dialog(
+            LoginModal(userType: userType),
+            arguments: {"userType": userType},
+            barrierDismissible: true,
+            transitionDuration: const Duration(milliseconds: 400),
+            transitionCurve: Curves.easeInOut,
+            barrierColor: Colors.black.withOpacity(0.5),
+          );
+        },
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(width: 8),
+              Text(
+                text,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
